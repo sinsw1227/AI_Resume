@@ -6,7 +6,7 @@
     <title>신승완 | 비행자동차 AI 프로토타입</title>
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Inter Font (Tailwind default is generally Inter, but explicitly loading if needed) -->
+    <!-- Inter Font -->
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
         body {
@@ -43,11 +43,11 @@
                 <p class="mt-2 text-xl text-primary-blue font-medium">사용자의 만족감을 충족시키는 프론트엔드 개발자</p>
             </div>
             <div class="mt-8 md:mt-0 flex flex-col space-y-2 text-sm text-gray-400">
-                <a href="mailto:sinsw1227@gmail.com" class="hover:text-primary-blue transition duration-150 flex items-center">
+                <a href="mailto:sinsw1227@gmail.com" class="hover:text-primary-blue transition duration-150 flex items-center justify-center md:justify-start">
                     <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
                     sinsw1227@gmail.com
                 </a>
-                <a href="https://github.com/sinsw1227.github.io/AI_Resume/" target="_blank" class="hover:text-primary-blue transition duration-150 flex items-center">
+                <a href="https://github.com/sinsw1227.github.io/AI_Resume/" target="_blank" class="hover:text-primary-blue transition duration-150 flex items-center justify-center md:justify-start">
                     <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M12 2C6.477 2 2 6.477 2 12c0 4.418 2.865 8.163 6.839 9.48.5.092.682-.217.682-.483 0-.237-.008-.865-.013-1.7a6.666 6.666 0 01-2.146 1.168c-.698.188-.847-.406-.847-.732-.486-.13-.99-.418-1.15-.815-.316-.798-.77-1.07-.698-1.15-.224-.15-.544-.19-.418-.19.418 0 .684.394 1.118.99.394.684.99 1.173 1.706 1.488.07.13.208.2.348.2.14 0 .28-.06.348-.2.13-.07.418-.2.684-.394 0-.13.065-.247 0-.394-.698-.188-1.172-.51-1.728-1.258-.556-.748-.847-1.748-.847-2.79 0-.616.14-1.218.418-1.737-.01-.02-.02-.04-.028-.06.748-.088 1.54.27 2.146.99.606.72.934 1.738.934 2.81 0 1.072-.328 2.09-.934 2.81-.606.72-1.398 1.078-2.146.99-.018-.04-.03-.08-.04-.12-.394-1.353-.698-2.72-.698-4.148 0-1.737.476-3.376 1.43-4.757 0 0 .44-.124 1.45.48.91-.252 1.875-.38 2.84-.38s1.93.128 2.84.38c1.01-.604 1.45-.48 1.45-.48.954 1.381 1.43 3.02 1.43 4.757 0 1.428-.304 2.795-.698 4.148-.01.04-.02.08-.04.12-.556.748-1.172 1.258-1.728 1.446 0 .01-.008.02-.013.027.616.188 1.118.57 1.488 1.118.476.71.698 1.57.698 2.51 0 1.01-.172 1.944-.682 2.68.79.13 1.54.02 2.146-.277.606-.296.934-.73.934-1.428 0-.91-.304-1.614-.682-2.146-.38-.532-.865-.898-1.45-1.118-.585-.22-.977-.286-1.118-.286.13-1.07.418-2.09.99-2.81.572-.72 1.364-1.078 2.146-1.078 0-2.348-1.89-4.238-4.238-4.238z" clip-rule="evenodd"></path></svg>
                     GitHub
                 </a>
@@ -103,11 +103,14 @@
         <section class="mb-16 p-8 bg-gray-800 rounded-xl shadow-lg">
             <h2 class="text-3xl font-bold border-b-2 border-primary-blue pb-2 mb-6">🚀 프로젝트: 비행자동차 AI 프로토타입</h2>
 
-            <!-- Project Image Placeholder -->
-            <div class="mb-8 rounded-lg overflow-hidden border-2 border-primary-blue">
-                 <!-- A visually appealing placeholder for the project -->
-                <div class="w-full h-48 bg-gray-700 flex items-center justify-center text-gray-400 text-lg">
-                    
+            <!-- Project Image with Hover Overlay -->
+            <div class="mb-8 rounded-lg overflow-hidden border-2 border-primary-blue relative group cursor-pointer">
+                <img src="img/resumeGif.gif" alt="비행자동차 AI 프로토타입 시연" class="w-full h-auto object-cover transition-transform duration-300 group-hover:scale-105">
+                
+                <!-- Hover Overlay -->
+                <div class="absolute inset-0 bg-black bg-opacity-75 flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 p-4 text-center">
+                    <h3 class="text-2xl font-bold text-white mb-2">비행자동차 AI 제어 시스템</h3>
+                    <p class="text-gray-200 text-lg">Raspberry Pi와 Django/Flask를 활용한<br>실시간 영상 전송 및 하드웨어 제어 프로토타입</p>
                 </div>
             </div>
 
@@ -123,16 +126,16 @@
                 <h3 class="text-xl font-semibold mb-2 text-primary-blue">아키텍처/설계 (Architecture/Design)</h3>
                 <div class="text-gray-300 bg-gray-700 p-3 rounded-md">
                     <p>먼저 Raspberry 컴퓨터에서 충분한 작동을 위해 Python, Django를 채택하여 주 프레임워크를 담당했습니다.</p>
-                    <p>내부에서 원활한 데이터 전송을 위해 MQTT + Flask를 교차로 도입하면서 하드웨어 카메라가 작동되도록 합니다. 그 후 웹 상에서 확인을 위해 REST API를 도입했습니다.</p>
+                    <p class="mt-2">내부에서 원활한 데이터 전송을 위해 MQTT + Flask를 교차로 도입하면서 하드웨어 카메라가 작동되도록 합니다. 그 후 웹 상에서 확인을 위해 REST API를 도입했습니다.</p>
                     <!-- Architecture Diagram Placeholder -->
-                    <div class="mt-4 w-full h-24 bg-gray-600 flex items-center justify-center text-gray-400 text-sm rounded-md">
-                        [Architecture Diagram Placeholder: Raspberry Pi, Django, Flask, MQTT, Web REST API]
+                    <div class="mt-4 w-full h-24 bg-gray-600 flex items-center justify-center text-gray-400 text-sm rounded-md border border-gray-500 border-dashed">
+                        [아키텍처 다이어그램: Raspberry Pi, Django, Flask, MQTT, Web REST API]
                     </div>
                 </div>
             </div>
 
             <!-- Core Feature 1 -->
-            <div class="mb-6 border-l-4 border-yellow-500 pl-4">
+            <div class="mb-6 border-l-4 border-yellow-500 pl-4 bg-gray-700/50 py-2 rounded-r-md">
                 <h3 class="text-2xl font-bold mb-2 text-yellow-500">핵심 기능 1: Django+flask를 이용한 하드웨어 정보 표시</h3>
                 <p class="text-gray-300">Flask의 API 범용적 특성을 이용하여, 많은 데이터가 오갈 수 있도록 더 큰 프레임워크인 Django를 이용했습니다. 이로 인해 카메라의 화면 및 기타 데이터의 전송/전시 속도가 더 향상되며, 갱신 속도 또한 더 향상됩니다.</p>
             </div>
@@ -145,11 +148,11 @@
 
             <!-- Results and Retrospective -->
             <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <div class="p-4 bg-green-900/50 rounded-lg">
+                <div class="p-4 bg-green-900/50 rounded-lg border border-green-800">
                     <h4 class="text-lg font-semibold mb-2 text-green-400">결과 및 성과 (Results & Achievements)</h4>
                     <p class="text-gray-200">카메라에서 웹 상 전시가 가능하고, 카메라 내의 화면에서 일부 정보를 표시할 수 있었습니다.</p>
                 </div>
-                <div class="p-4 bg-orange-900/50 rounded-lg">
+                <div class="p-4 bg-orange-900/50 rounded-lg border border-orange-800">
                     <h4 class="text-lg font-semibold mb-2 text-orange-400">회고 (Retrospective)</h4>
                     <ul class="list-disc list-inside space-y-1 ml-4 text-gray-200">
                         <li>배운 점: Django의 큰 프레임워크 내에서 어디까지 가능한지 알 수 있었습니다.</li>
@@ -163,7 +166,7 @@
     </div>
 
     <!-- Footer -->
-    <footer class="py-6 px-4 sm:px-6 lg:px-8 bg-gray-900 text-center text-gray-400">
+    <footer class="py-6 px-4 sm:px-6 lg:px-8 bg-gray-900 text-center text-gray-400 border-t border-gray-800">
         <p class="text-sm">© 2024. 신승완 포트폴리오. All rights reserved.</p>
         <div class="mt-2 flex justify-center space-x-4">
             <a href="mailto:sinsw1227@gmail.com" class="hover:text-primary-blue transition duration-150">이메일 문의</a>
